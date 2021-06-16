@@ -89,11 +89,6 @@ const figures = {
         [0, 0, 0]
     ],
     'T': [
-        [0, 0, 1],
-        [1, 1, 1],
-        [0, 0, 0]
-    ],
-    'E': [
         [0, 1, 0],
         [1, 1, 1],
         [0, 0, 0]
@@ -103,12 +98,11 @@ const figures = {
 const colors = {
     'I': 'cyan',
     'O': 'yellow',
-    'T': 'purple',
+    'T': 'deepPink',
     'S': 'green',
     'Z': 'red',
     'J': 'blue',
     'L': 'orange',
-    'E': 'deepPink'
 }
 
 let count = 0;
@@ -125,7 +119,7 @@ function getRandomInt(min, max) {
 }
 
 function generateSequence() {
-    const sequence = ['I', 'J', 'L', 'O', 'S', 'T', 'Z', 'E'];
+    const sequence = ['I', 'J', 'L', 'O', 'S', 'T', 'Z'];
 
     while (sequence.length) {
         const rand = getRandomInt(0, sequence.length - 1);
@@ -294,7 +288,7 @@ function loop() {
 }
 
 document.addEventListener('keydown', function (e) {
-    let NAVIGATION = [37, 38, 39, 40]
+    let NAVIGATION = [32, 37, 38, 39, 40]
 
     if (-1 != NAVIGATION.indexOf(event.keyCode))
         event.preventDefault();
